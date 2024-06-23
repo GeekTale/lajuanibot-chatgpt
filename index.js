@@ -178,6 +178,7 @@ app.get('/gpt/:text', async (req, res) => {
         res.send(answer);
 
         //Intentando añadir TTS audio a los comandos de bot
+        /*
         if (ENABLE_TTS === 'true') {
             try {
                 const ttsAudioUrl = await bot.sayTTS("geektale", answer, "");
@@ -186,6 +187,7 @@ app.get('/gpt/:text', async (req, res) => {
                 console.error('TTS Error:', error);
             }
         }
+        */
         //Intentando añadir TTS audio a los comandos de bot
     } catch (error) {
         console.error('Error generating response:', error);
