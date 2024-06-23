@@ -180,7 +180,7 @@ app.get('/gpt/:text', async (req, res) => {
         //Intentando añadir TTS audio a los comandos de bot
         if (ENABLE_TTS === 'true') {
             try {
-                const ttsAudioUrl = await bot.sayTTS(channel, response, user['userstate']);
+                const ttsAudioUrl = await bot.sayTTS("geektale", text, "");
                 notifyFileChange(ttsAudioUrl);
             } catch (error) {
                 console.error('TTS Error:', error);
